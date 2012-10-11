@@ -1,0 +1,12 @@
+require 'rake'
+require 'rake/testtask'
+
+task :test => [:unidades_test]
+
+desc "Lleva a cabo los test"
+Rake::TestTask.new("unidades_test") { |t|
+t.pattern = 'tc_*.rb'
+t.warning = true
+t.verbose = true
+
+}
